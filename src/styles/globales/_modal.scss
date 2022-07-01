@@ -1,0 +1,58 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.648);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  width: 500px;
+  min-height: 100px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: rgb(100 100 111 / 0.2) 0px 7px 29px 0px;
+  padding: 10px 20px;
+  @include m.tablet {
+    width: 80vw;
+  }
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+
+  .modal__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+.btn-cerrar {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transform: scale(0.5);
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: lighten(v.$mainColor, 30%);
+  }
+}

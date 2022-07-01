@@ -1,0 +1,34 @@
+@use '../globales/variables' as v;
+@use '../globales/mixins' as m;
+
+.auth__register {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include m.telefono {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+}
+
+.auth__links {
+    gap: 5px;
+    display: flex;
+    font-size: 15px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    .auth__opcion {
+        cursor: pointer;
+        color: v.$negro;
+        text-decoration: none;
+        transition: v.$tran-03;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

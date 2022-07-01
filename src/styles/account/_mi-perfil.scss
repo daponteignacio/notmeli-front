@@ -1,0 +1,19 @@
+.perfil {
+    position: relative;
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .edit-profile-pic {
+        position: absolute;
+        top: 77%;
+        left: 77%;
+        border-radius: 50%;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 6px 6px 7px -8px rgba(0,0,0,0.75);
+        cursor: pointer;
+    }
+}

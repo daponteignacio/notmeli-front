@@ -1,0 +1,78 @@
+@use "../globales/variables" as v;
+@use "../globales/mixins" as m;
+
+.account {
+  display: flex;
+  width: 90%;
+  min-height: 100vh;
+}
+
+.account__aside {
+  width: 400px;
+  background-color: v.$mainColor;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.account__main-aside {
+  width: 100%;
+  margin: 20px 0px 20px 40px;
+
+  @include m.telefono {
+    margin: 0 0 0 15px;
+  }
+
+  &.account__main-aside--margin0 {
+    margin: 0;
+    padding: 50px;
+  }
+
+  .account__title {
+    @include m.telefono {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.account__tarjeta {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(0 0 0 / 0.1);
+  width: 80%;
+}
+
+.account__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  @include m.telefono {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &.account__header--space-between {
+    justify-content: space-between;
+  }
+}
+.account__botones {
+  display: flex;
+  gap: 15px;
+
+  justify-content: space-between;
+  @include m.telefono {
+    flex-direction: column;
+  }
+}
+
+.account__grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;;
+
+  @include m.telefono {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
+
+}

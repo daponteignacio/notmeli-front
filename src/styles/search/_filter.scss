@@ -1,0 +1,25 @@
+@use "../globales/variables" as v;
+@use "../globales/mixins" as m;
+
+.filter__button {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0px 5px;
+  cursor: pointer;
+  transition: v.$tran-03;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgb(206, 206, 206);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  img {
+    height: 25px;
+  }
+}

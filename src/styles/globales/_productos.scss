@@ -1,0 +1,113 @@
+@use "./mixins" as m;
+
+.producto {
+  height: auto;
+  display: flex;
+  padding: 10px 15px;
+  border-radius: 5px;
+  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  @include m.telefono {
+    width: 80%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &:hover {
+    box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.producto__info {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto__imagen {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.producto__comprado {
+  color: #787878;
+  margin-top: 50px;
+}
+
+.producto__titulo {
+  margin: 0;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.producto__precio {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #23791e;
+  margin-bottom: 5px;
+}
+
+.producto__envio {
+  margin: 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.producto__label {
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.producto__label--envio {
+  font-size: 14px;
+}
+
+.producto__valor {
+  color: #23791e;
+}
+
+.producto__botones,
+.producto__header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.producto__carrito {
+  height: 40px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  width: 25%;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.producto__favoritos {
+  width: 40px;
+  cursor: pointer;
+  height: 38px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(255, 35, 86, 0.334);
+  }
+
+  &.faveado {
+    background-color: rgb(255, 35, 86);
+  }
+}

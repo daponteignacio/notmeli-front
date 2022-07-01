@@ -1,0 +1,154 @@
+@use "../globales/variables" as v;
+@use "../globales/mixins" as m;
+
+.pago {
+  gap: 15px;
+  width: 105%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include m.telefono {
+      display: block;
+  }
+
+  .pago__tarjeta,
+  .pago__agregar {
+
+    
+  @include m.telefono {
+    margin-bottom: 20px;
+}
+
+    width: 100%;
+    height: 110px;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    padding: 0px 10px 0px 10px;
+    justify-content: space-between;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 3px 3px 5px -1px rgba(0, 0, 0, 0.2);
+    &.brubank {
+      border-left: 5px solid #614ad8;
+    }
+    &.uala {
+      border-left: 5px solid #eb606a;
+    }
+    &.bapro {
+      border-left: 5px solid #279d2e;
+    }
+    &.frances {
+      border-left: 5px solid #043263;
+    }
+    &.hsbc {
+      border-left: 5px solid #db0011;
+    }
+    &.naranja {
+      border-left: 5px solid #fe5000;
+    }
+  }
+}
+
+.pago__banco {
+  font-size: 15px;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 0;
+  justify-content: space-between;
+}
+
+.pago__num-tarjeta {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: normal;
+  margin-right: 5px;
+  user-select: all;
+}
+
+.pago__botones {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 10px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.pago__eliminar,
+.pago__modificar {
+  margin: 0;
+  height: 20px;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 2px 5px;
+  font-weight: 500;
+  
+  border-radius: 3px;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.pago__eliminar {
+  margin-right: 5px;
+  background-color: rgb(255, 28, 28);
+}
+
+.pago__modificar {
+  margin: 0;
+  background-color: rgb(255, 153, 28);
+}
+
+.pago__emisora {
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin: 0;
+
+  &.master {
+    background-color: #f25a00;
+    color: black;
+  }
+  &.visa {
+    background-color: #293b60;
+    color: #f0af25;
+  }
+  &.american {
+    background-color: #1072d1;
+    color: white;
+  }
+}
+
+.pago__agregar {
+  border-left: 5px solid #5d5d5d;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  .agregar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    color: grey;
+
+    .agregar__text {
+      font-size: 16px;
+    }
+  }
+}

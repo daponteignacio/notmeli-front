@@ -1,0 +1,32 @@
+@use "../globales/variables" as v;
+@use "../globales/mixins" as m;
+
+.promos {
+  padding: 0px 15px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  @include m.telefono {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .promos__tarjeta {
+    display: flex;
+    padding: 20px 0px;
+    border-radius: 5px;
+    height: 150px;
+    align-items: center;
+    flex-direction: column;
+    background-color: v.$blanco;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 1px rgba(110, 110, 110, 0.395);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(110, 110, 110, 0.395);
+
+    .promos__titulo {
+      text-align: center;
+      width: 60%;
+    }
+  }
+}

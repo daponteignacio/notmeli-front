@@ -1,0 +1,60 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  transition: v.$tran-05;
+  background-color: v.$body-color;
+  font-family: "Poppins", sans-serif;
+}
+
+::selection {
+  color: #fff;
+  background-color: v.$primary-color;
+}
+
+.tdn {
+  text-decoration: none;
+  color: v.$blanco;
+
+  &:hover {
+    color: v.$blanco;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  @include m.telefono {
+    margin: 0;
+  }
+}
+
+.center-content {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.flex-row {
+  gap: 100px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}

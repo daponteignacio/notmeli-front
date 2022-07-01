@@ -1,0 +1,16 @@
+// @use 'variables' as v;
+// @use 'mixins' as m;
+
+// .btn-cerrar-sesion { margin-top: 10px }
+
+// .btn { @include m.boton(v.$mainColor, v.$blanco) }
+
+// .btn-volver { @include m.boton(darken(v.$mainColor, 20%), v.$blanco) }
+
+// .btn-eliminar, .btn-cerrar-sesion { @include m.boton(v.$rojo, v.$blanco) }
+
+
+// .btn-form {
+//     @include m.boton(v.$verde, v.$blanco);
+//     width: 170px;
+// }

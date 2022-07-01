@@ -1,0 +1,29 @@
+@import "../../node_modules/animate.css";
+
+@import "./auth/auth";
+
+@import "./main/top5";
+@import "./main/promos";
+@import "./main/footer";
+@import "./main/producto";
+@import "./main/categorias";
+
+@import "./globales/modal";
+@import "./globales/mixins";
+@import "./globales/spinner";
+@import "./globales/botones";
+@import "./globales/globales";
+@import "./globales/normalize";
+@import "./globales/variables";
+@import "./globales/productos";
+
+@import "./account/account";
+@import "./account/sidebar";
+@import "./account/carrito";
+@import "./account/favoritos";
+@import "./account/mi-perfil";
+@import "./account/medios-pago";
+@import "./account/mis-publicaciones";
+
+@import "./search/search";
+@import "./search/filter";
